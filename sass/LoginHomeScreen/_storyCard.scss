@@ -1,0 +1,57 @@
+.story-card {
+  color: #fff;
+  margin: 0 auto;
+  gap: 1em;
+  height: 500px;
+  //   border: 1px solid red;
+  border-bottom: 0.8rem solid $primary-light-dark;
+
+  align-items: center;
+
+  &__text {
+    h2 {
+      font-weight: 600;
+      flex: 0.5;
+    }
+    grid-column: 2/6;
+  }
+
+  &__img {
+    grid-column: 6/9;
+    position: relative;
+
+    img {
+      //   display: block;
+      width: 100%;
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__video-1 {
+    display: block;
+    width: 97%;
+    position: absolute;
+    top: 11%;
+    left: 1%;
+    transform: scale(0.75);
+  }
+
+  &__video-2 {
+    position: absolute;
+    top: 8%;
+    left: 18%;
+    width: 62%;
+  }
+
+  &-reverse {
+    .story-card__img {
+      grid-column: 2/5;
+      grid-row: 1;
+    }
+
+    .story-card__text {
+      grid-column: 5/8;
+    }
+  }
+}

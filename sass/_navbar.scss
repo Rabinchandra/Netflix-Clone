@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5em;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &__logo {
+    width: 190px;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}

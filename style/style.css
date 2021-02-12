@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+body {
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+input {
+  outline: none;
+  padding: 7px 17px;
+  font-size: inherit;
+  border: 1px solid #ccc;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn {
+  outline: none;
+  padding: 7px 17px;
+  color: #fff;
+}
+
+.btn-red {
+  background: #e50914;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5em;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.navbar__logo {
+  width: 190px;
+}
+
+.navbar__logo img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.loginHomeScreen {
+  background-color: black;
+}
+
+.loginHomeScreen__showcase {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 70%), url("https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/4a9270dc-7a97-44da-bda4-4dfc2dd4ea20/IN-en-20210201-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  border-bottom: 0.6rem solid #222;
+  text-align: center;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginHomeScreen__showcase .showcase__text {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 0em;
+}
+
+.loginHomeScreen__showcase .showcase__text h1 {
+  font-weight: 600;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 3.7rem;
+}
+
+.story-card {
+  color: #fff;
+  margin: 0 auto;
+  gap: 1em;
+  height: 500px;
+  border-bottom: 0.8rem solid #222;
+  align-items: center;
+}
+
+.story-card__text {
+  grid-column: 2/6;
+}
+
+.story-card__text h2 {
+  font-weight: 600;
+  flex: 0.5;
+}
+
+.story-card__img {
+  grid-column: 6/9;
+  position: relative;
+}
+
+.story-card__img img {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.story-card__video-1 {
+  display: block;
+  width: 97%;
+  position: absolute;
+  top: 11%;
+  left: 1%;
+  transform: scale(0.75);
+}
+
+.story-card__video-2 {
+  position: absolute;
+  top: 8%;
+  left: 18%;
+  width: 62%;
+}
+
+.story-card-reverse .story-card__img {
+  grid-column: 2/5;
+  grid-row: 1;
+}
+
+.story-card-reverse .story-card__text {
+  grid-column: 5/8;
+}
+
+.faq {
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2.4em;
+  padding-bottom: 5em;
+  border-bottom: 0.8rem solid #222;
+}
+
+.faq h2 {
+  text-align: center;
+}
+
+.faq-collapse {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-collapse:last-child {
+  margin-bottom: 4rem;
+}
+
+.faq-collapse__question, .faq-collapse__ans {
+  background-color: #303030;
+  font-size: 1.5em;
+}
+
+.faq-collapse__question {
+  margin: 0;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 25px;
+}
+
+.faq-collapse__question .sign {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.faq-collapse__ans {
+  max-height: 0px;
+  overflow: hidden;
+  transition-property: padding, max-height, opacity;
+  transition-duration: 0.2s, 0.3s, 0.2s;
+  padding: 0 25px;
+}
+
+.open .faq-collapse__ans {
+  max-height: 700px;
+  padding: 18px 25px;
+}
+
+.get-started-input {
+  text-align: center;
+}
+
+.get-started-input h5 {
+  margin: 14px;
+  margin-bottom: 20px;
+}
+
+.get-started-input .input-container {
+  display: inline-flex;
+  width: 100%;
+  margin: 0 auto !important;
+  max-width: 700px;
+}
+
+.get-started-input .input-container input,
+.get-started-input .input-container a {
+  display: block;
+  padding: 0.5em 1.1em;
+}
+
+.get-started-input .input-container a {
+  font-size: 1.7em;
+}
+
+.get-started-input .input-container a:hover {
+  background-color: #f72a35;
+}
+
+.get-started-input .input-container input {
+  flex: 1;
+}
+
+.dark-footer {
+  color: #757575;
+  padding: 4em 0;
+}
+
+.dark-footer header {
+  grid-column: 3 / span 10;
+  margin-bottom: 2em;
+}
+
+.dark-footer a {
+  color: #757575;
+}
+
+.dark-footer a:hover {
+  text-decoration: underline;
+}
+
+.dark-footer ul {
+  grid-column: span 2;
+  font-size: 14px;
+}
+
+.dark-footer ul li {
+  margin-bottom: 13px;
+}
+
+.dark-footer__select {
+  grid-row: 3;
+  grid-column: 3;
+  outline: 0;
+  margin: 1.3em 0;
+}
+
+.dark-footer small {
+  grid-row: 4;
+  grid-column: 3 / span 5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  position: relative;
+}

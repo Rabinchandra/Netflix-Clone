@@ -1,0 +1,38 @@
+.dark-footer {
+  color: #757575;
+  padding: 4em 0;
+
+  header {
+    grid-column: 3 / span 10;
+    margin-bottom: 2em;
+  }
+
+  a {
+    color: #757575;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    grid-column: span 2;
+    font-size: 14px;
+
+    li {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__select {
+    grid-row: 3;
+    grid-column: 3;
+    outline: 0;
+    margin: 1.3em 0;
+  }
+
+  small {
+    grid-row: 4;
+    grid-column: 3 / span 5;
+  }
+}

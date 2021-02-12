@@ -1,0 +1,32 @@
+.get-started-input {
+  text-align: center;
+  h5 {
+    margin: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-container {
+    display: inline-flex;
+    width: 100%;
+    margin: 0 auto !important;
+    max-width: 700px;
+
+    input,
+    a {
+      display: block;
+      padding: 0.5em 1.1em;
+    }
+
+    a {
+      font-size: 1.7em;
+    }
+
+    a:hover {
+      background-color: lighten($primary-red, 10%);
+    }
+
+    input {
+      flex: 1;
+    }
+  }
+}
