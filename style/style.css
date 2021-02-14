@@ -185,6 +185,7 @@ ul {
 @media screen and (max-width: 550px) {
   .loginHomeScreen__showcase {
     height: 80vh;
+    padding: 0.5em;
     padding-top: 100px !important;
     background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.8) 99%), url("https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/4a9270dc-7a97-44da-bda4-4dfc2dd4ea20/IN-en-20210201-popsignuptwoweeks-perspective_alpha_website_small.jpg");
     background-position: center center;
@@ -283,6 +284,13 @@ ul {
     margin-bottom: 15px !important;
   }
   .story-card__img {
+    grid-column: 2/9;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .story-card-reverse .story-card__img {
     grid-column: 2/9;
   }
 }
@@ -419,12 +427,21 @@ ul {
 
 @media screen and (max-width: 950px) {
   .get-started-input {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
   }
   .get-started-input .input-container a {
     font-size: 1rem;
     padding: 12px 16px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .get-started-input {
+    padding: 0 !important;
+  }
+  .get-started-input .input-container {
+    max-width: 90% !important;
   }
 }
 
