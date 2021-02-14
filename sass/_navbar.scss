@@ -17,3 +17,20 @@
     }
   }
 }
+
+@media screen and (max-width: $large-screen) {
+  .navbar {
+    &__logo {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen) {
+  .navbar {
+    padding: 1rem 1.5rem;
+    &__logo {
+      width: 110px;
+    }
+  }
+}

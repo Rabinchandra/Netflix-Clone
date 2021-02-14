@@ -4,14 +4,16 @@
   margin: 0 auto;
   padding-top: 2.4em;
   padding-bottom: 5em;
-  border-bottom: 0.8rem solid $primary-light-dark;
+  border-bottom: 0.5rem solid $primary-light-dark;
 
   h2 {
     text-align: center;
+    font-weight: 500;
   }
 
   &-collapse {
     max-width: 800px;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 10px;
     cursor: pointer;
@@ -31,6 +33,7 @@
       margin-bottom: 2px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 18px 25px;
 
       .sign {
@@ -47,11 +50,49 @@
       padding: 0 25px;
     }
   }
+
+  .get-started-input {
+    padding: 0 2.5em;
+  }
+
+  .open {
+    .faq-collapse__ans {
+      max-height: 700px;
+      padding: 18px 25px;
+    }
+  }
 }
 
-.open {
-  .faq-collapse__ans {
-    max-height: 700px;
-    padding: 18px 25px;
+@media screen and (max-width: $medium-screen) {
+  .faq {
+    &-collapse {
+      // border: 1px solid red;
+
+      &__question,
+      &__ans {
+        font-size: 1.2em;
+      }
+
+      &__question {
+        padding: 14px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen) {
+  .faq {
+    &-collapse {
+      width: 100%;
+
+      &__question,
+      &__ans {
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  .get-started-input {
+    padding: 0 1.7em !important;
   }
 }

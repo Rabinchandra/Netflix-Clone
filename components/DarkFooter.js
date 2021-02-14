@@ -8,12 +8,17 @@ function DarkFooter() {
         <li>
           <a href='#'>FAQ</a>
         </li>
+        <li className='medium-screen-link'>
+          <a href='#'>Media Center</a>
+        </li>
         <li>
           <a href='#'>Investor Relations</a>
         </li>
+
         <li>
           <a href='#'>Privacy</a>
         </li>
+
         <li>
           <a href='#'>Speed Test</a>
         </li>
@@ -25,6 +30,9 @@ function DarkFooter() {
         </li>
         <li>
           <a href='#'>Jobs</a>
+        </li>
+        <li className='medium-screen-link'>
+          <a href='#'>Terms of Use</a>
         </li>
         <li>
           <a href='#'>Cookie Preferences</a>
@@ -42,6 +50,9 @@ function DarkFooter() {
         </li>
         <li>
           <a href='#'>Corporate Information</a>
+        </li>
+        <li className='medium-screen-link'>
+          <a href='#'>Contact Us</a>
         </li>
         <li>
           <a href='#'>Netflix Originals</a>

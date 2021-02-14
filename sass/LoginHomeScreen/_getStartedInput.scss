@@ -14,7 +14,7 @@
     input,
     a {
       display: block;
-      padding: 0.5em 1.1em;
+      padding: 1rem 1.1em;
     }
 
     a {
@@ -27,6 +27,36 @@
 
     input {
       flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: $large-screen) {
+  .get-started-input {
+    .input-container {
+      display: block;
+
+      a {
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  .get-started-input {
+    max-width: 600px;
+    margin: 0 auto;
+    .input-container {
+      a {
+        font-size: 1rem;
+        padding: 12px 16px;
+      }
     }
   }
 }
