@@ -1,0 +1,68 @@
+.signin-form {
+  width: 450px;
+  min-height: 600px;
+  margin: 5.5rem auto;
+  color: #b3b3b3;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem 4rem;
+
+  & > * {
+    display: block;
+    width: 100%;
+  }
+
+  h3 {
+    font-weight: 500;
+    color: #fff;
+  }
+
+  #emailOrPhone,
+  #password {
+    background: #333;
+    border: none;
+    padding: 1rem 1rem;
+    margin-bottom: 13px;
+    border-radius: 6px;
+    color: #fff;
+  }
+
+  button[type='submit'] {
+    margin-top: 1.5rem;
+    padding: 0.9rem 0;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  div {
+    font-size: 0.8rem;
+    a {
+      color: #b3b3b3;
+    }
+  }
+
+  section {
+    margin-top: 3rem;
+    font-weight: 300;
+
+    span.signup {
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .signin-form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    margin-top: 7rem;
+    padding: 0 2rem;
+    min-height: 500px;
+  }
+}

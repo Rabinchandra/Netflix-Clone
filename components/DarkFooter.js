@@ -1,3 +1,5 @@
+import LanguageSelect from './LanguageSelect';
+
 function DarkFooter() {
   return (
     <footer className='dark-footer grid-12'>
@@ -69,10 +71,7 @@ function DarkFooter() {
           <a href='#'>Contact Us</a>
         </li>
       </ul>
-      <select className='dark-footer__select'>
-        <option value='english'>English</option>
-        <option value='hindi'>Hindi</option>
-      </select>
+      <LanguageSelect />
       <small>Netflix India</small>
     </footer>
   );

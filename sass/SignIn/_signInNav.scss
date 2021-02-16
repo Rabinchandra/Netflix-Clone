@@ -1,0 +1,16 @@
+.signin {
+  .navbar {
+    img {
+      min-width: 180px;
+    }
+    .sign-in-btn {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .navbar {
+    padding: 0.3rem 1rem;
+  }
+}

@@ -4,12 +4,21 @@
 @import 'global';
 @import 'navbar';
 
+@import 'languageSelect';
+
+// Login Home Screen
 @import './LoginHomeScreen/loginHomeScreen';
 @import './LoginHomeScreen/showcase';
 @import './LoginHomeScreen/storyCard';
 @import './LoginHomeScreen/faq';
 @import './LoginHomeScreen/getStartedInput';
 @import 'darkfooter';
+
+// Sign up
+@import './SignIn/signInBody';
+@import './SignIn/signInNav';
+@import './SignIn/signInForm';
+@import './SignIn/signInFooter';
 
 * {
   box-sizing: border-box;

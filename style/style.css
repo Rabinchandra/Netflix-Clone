@@ -50,6 +50,7 @@ ul {
 
 .btn {
   outline: none;
+  border: none;
   padding: 7px 17px;
   color: #fff;
 }
@@ -68,6 +69,15 @@ ul {
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-between {
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 1340px) {
@@ -114,7 +124,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2.5em;
+  padding: 0em 2.5em;
   position: absolute;
   width: 100%;
   top: 0;
@@ -123,6 +133,7 @@ ul {
 
 .navbar__logo {
   width: 190px;
+  cursor: pointer;
 }
 
 .navbar__logo img {
@@ -138,11 +149,37 @@ ul {
 
 @media screen and (max-width: 550px) {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
   }
   .navbar__logo {
     width: 110px;
   }
+}
+
+.language-select {
+  outline: 0;
+  margin: 1.3em 0;
+  padding: 1.2rem 16px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid #757575;
+  appearance: none;
+  font-size: 16px;
+  color: #757575;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M5 8l4 4 4-4z" fill="grey"/></svg>'), linear-gradient(to bottom, black, black);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 1.8rem;
+  min-width: 115px;
+}
+
+.language-select:focus {
+  border: 1px solid #fff;
+}
+
+.language-select option {
+  background: black;
 }
 
 .loginHomeScreen {
@@ -492,32 +529,9 @@ ul {
   display: none;
 }
 
-.dark-footer__select {
+.dark-footer .language-select {
   grid-row: 3;
   grid-column: 3;
-  outline: 0;
-  margin: 1.3em 0;
-  padding: 1.2rem 16px;
-  border-radius: 2px;
-  outline: none;
-  border: 1px solid #757575;
-  appearance: none;
-  font-size: 16px;
-  color: #757575;
-  appearance: none;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M5 8l4 4 4-4z" fill="grey"/></svg>'), linear-gradient(to bottom, black, black);
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 1.8rem;
-  min-width: 115px;
-}
-
-.dark-footer__select:focus {
-  border: 1px solid #fff;
-}
-
-.dark-footer__select option {
-  background: black;
 }
 
 .dark-footer small {
@@ -571,13 +585,206 @@ ul {
     grid-column: 6 / span 6;
     grid-row: 3 !important;
   }
-  .dark-footer__select {
+  .dark-footer .language-select {
     grid-column: 2;
     grid-row: 4;
   }
   .dark-footer small {
     grid-column: 2;
     grid-row: 5;
+  }
+}
+
+.signin {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/4a9270dc-7a97-44da-bda4-4dfc2dd4ea20/IN-en-20210201-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  background-size: 130%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 730px) {
+  .signin {
+    background: black;
+  }
+}
+
+.signin .navbar img {
+  min-width: 180px;
+}
+
+.signin .navbar .sign-in-btn {
+  display: none;
+}
+
+@media screen and (max-width: 730px) {
+  .navbar {
+    padding: 0.3rem 1rem;
+  }
+}
+
+.signin-form {
+  width: 450px;
+  min-height: 600px;
+  margin: 5.5rem auto;
+  color: #b3b3b3;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem 4rem;
+}
+
+.signin-form > * {
+  display: block;
+  width: 100%;
+}
+
+.signin-form h3 {
+  font-weight: 500;
+  color: #fff;
+}
+
+.signin-form #emailOrPhone,
+.signin-form #password {
+  background: #333;
+  border: none;
+  padding: 1rem 1rem;
+  margin-bottom: 13px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.signin-form button[type='submit'] {
+  margin-top: 1.5rem;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.signin-form div {
+  font-size: 0.8rem;
+}
+
+.signin-form div a {
+  color: #b3b3b3;
+}
+
+.signin-form section {
+  margin-top: 3rem;
+  font-weight: 300;
+}
+
+.signin-form section span.signup {
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signin-form section span.signup:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 730px) {
+  .signin-form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    margin-top: 7rem;
+    padding: 0 2rem;
+    min-height: 500px;
+  }
+}
+
+.signin-footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 3rem 0;
+}
+
+.signin-footer header,
+.signin-footer a {
+  color: #757575;
+}
+
+.signin-footer a:hover {
+  text-decoration: underline;
+}
+
+.signin-footer header {
+  grid-column: 3 / span 10;
+  margin-bottom: 1.5rem;
+}
+
+.signin-footer li {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.signin-footer__links-1 {
+  grid-column: 3 / span 2;
+}
+
+.signin-footer__links-2 {
+  grid-column: 5 / span 2;
+}
+
+.signin-footer__links-3 {
+  grid-column: 7 / span 2;
+}
+
+.signin-footer__links-4 {
+  grid-column: 9 / span 2;
+}
+
+.signin-footer .language-select {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+.signin-footer .medium-screen-link {
+  display: none;
+}
+
+@media screen and (max-width: 730px) {
+  .signin-footer {
+    border-top: 2px solid #222;
+  }
+  .signin-footer header {
+    grid-column: 2 / span 10;
+  }
+  .signin-footer__links-1 {
+    grid-column: 2 / span 3;
+  }
+  .signin-footer__links-2 {
+    grid-column: 5 / span 3;
+  }
+  .signin-footer__links-3 {
+    grid-column: 9 / span 3;
+  }
+  .signin-footer__links-4 {
+    display: none;
+  }
+  .signin-footer .language-select {
+    grid-column: 2;
+  }
+  .signin-footer .small-screen-link {
+    display: none;
+  }
+  .signin-footer .medium-screen-link {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .signin-footer__links-1 {
+    grid-column: 2 / span 4;
+  }
+  .signin-footer__links-2 {
+    grid-column: 6 / span 6;
+  }
+  .signin-footer__links-3 {
+    display: none;
+  }
+  .signin-footer .small-screen-link {
+    display: block;
+  }
+  .signin-footer .medium-screen-link {
+    display: none;
   }
 }
 
