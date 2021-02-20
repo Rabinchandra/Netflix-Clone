@@ -2,8 +2,9 @@
 
 @import 'variables';
 @import 'global';
-@import 'navbar';
+@import 'utilities';
 
+@import 'navbar';
 @import 'languageSelect';
 
 // Login Home Screen
@@ -22,9 +23,9 @@
 
 // Sign Up
 @import 'lightNavbar';
-@import 'signup';
-
 @import 'lightfooter';
+@import './signup/signup';
+@import './signup/planform';
 
 * {
   box-sizing: border-box;
