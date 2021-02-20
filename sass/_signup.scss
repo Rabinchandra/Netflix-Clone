@@ -1,0 +1,65 @@
+.signup {
+  &__see-plan-container {
+    // border: 1px solid red;
+    width: 340px;
+    margin: 7rem auto;
+    line-height: 1.7em;
+    margin-bottom: 12em;
+
+    & > * {
+      display: block;
+    }
+
+    i,
+    header,
+    small {
+      text-align: center;
+    }
+
+    i {
+      color: $primary-red;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    header {
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    ul {
+      margin: 1.4rem 0;
+
+      li {
+        margin-bottom: 1rem;
+        background: url('/icons/checkmark.png') no-repeat;
+        background-size: 20px auto;
+        background-position: 0 center;
+        padding-left: 2rem;
+      }
+    }
+
+    .see-plan-submit {
+      margin-top: 2.4rem;
+      width: 100%;
+      padding: 0.7em 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($primary-red, 5%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen) {
+  .signup {
+    &__see-plan-container {
+      header,
+      i,
+      small {
+        text-align: left;
+      }
+    }
+  }
+}

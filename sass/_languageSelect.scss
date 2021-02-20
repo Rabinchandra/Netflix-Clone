@@ -4,7 +4,6 @@
   padding: 1.2rem 16px;
   border-radius: 2px;
   outline: none;
-  border: 1px solid #757575;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -14,17 +13,27 @@
   -webkit-appearance: none;
   appearance: none;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M5 8l4 4 4-4z" fill="grey"/></svg>'),
-    linear-gradient(to bottom, $primary-dark, $primary-dark);
+    transparent;
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 1.8rem;
   min-width: 115px;
 
-  &:focus {
-    border: 1px solid #fff;
+  & option {
+    background: transparent;
   }
 
-  & option {
-    background: $primary-dark;
+  &-dark {
+    & option {
+      background: $primary-dark;
+    }
+    border: 1px solid #757575;
+    &:focus {
+      border: 1px solid #fff;
+    }
+  }
+
+  &-white:focus {
+    border: 1px solid #333;
   }
 }

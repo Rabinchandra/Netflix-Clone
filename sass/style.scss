@@ -14,11 +14,17 @@
 @import './LoginHomeScreen/getStartedInput';
 @import 'darkfooter';
 
-// Sign up
+// Sign In
 @import './SignIn/signInBody';
 @import './SignIn/signInNav';
 @import './SignIn/signInForm';
 @import './SignIn/signInFooter';
+
+// Sign Up
+@import 'lightNavbar';
+@import 'signup';
+
+@import 'lightfooter';
 
 * {
   box-sizing: border-box;

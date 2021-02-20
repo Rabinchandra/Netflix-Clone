@@ -1,12 +1,13 @@
-import LanguageSelect from '../LanguageSelect';
+import React from 'react';
+import LanguageSelect from './LanguageSelect';
 
-function SignInFooter() {
+function LightFooter() {
   return (
-    <footer className='signin-footer grid-12'>
+    <footer className='light-footer grid-12'>
       <header>
-        Questions? Call <a href='tel:000-800-040-1843'>000-800-040-1843</a>
+        Questions? Call <a href='tel:800-040-1843'>800-040-1843</a>
       </header>
-      <ul className='signin-footer__links-1'>
+      <ul className='light-footer__links-1'>
         <li>
           <a href='#'>FAQ</a>
         </li>
@@ -17,7 +18,7 @@ function SignInFooter() {
           <a href='#'>Cookie Preferences</a>
         </li>
       </ul>
-      <ul className='signin-footer__links-2'>
+      <ul className='light-footer__links-2'>
         <li>
           <a href='#'>Help Center</a>
         </li>
@@ -28,7 +29,7 @@ function SignInFooter() {
           <a href='#'>Corporate Infomation</a>
         </li>
       </ul>
-      <ul className='signin-footer__links-3'>
+      <ul className='light-footer__links-3'>
         <li>
           <a href='#'>Terms of Use</a>
         </li>
@@ -36,14 +37,14 @@ function SignInFooter() {
           <a href='#'>Privacy</a>
         </li>
       </ul>
-      <ul className='signin-footer__links-4'>
+      <ul className='light-footer__links-4'>
         <li>
           <a href='#'>Privacy</a>
         </li>
       </ul>
-      <LanguageSelect isDark={true} />
+      <LanguageSelect isDark={false} />
     </footer>
   );
 }
 
-export default SignInFooter;
+export default LightFooter;
