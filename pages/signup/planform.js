@@ -128,7 +128,7 @@ function planform() {
             Screens you can watch on at the same time
           </section>
 
-          <section className='plan-options grid-12'>
+          <section className='plan-op tions grid-12'>
             <div>Screens you can watch on at the same time</div>
             <div className='plan-option mobile'>1</div>
             <div className='plan-option standard'>1</div>

@@ -4,10 +4,10 @@ import StoryCards from './LoginHomeScreen/StoryCards';
 import Faq from './LoginHomeScreen/Faq';
 import DarkFooter from './DarkFooter';
 
-function LoginHomeScreen() {
+function LoginHomeScreen({ user }) {
   return (
     <div className='loginHomeScreen'>
-      <Navbar />
+      <Navbar user={user} />
       <Showcase />
       <StoryCards />
       <Faq />

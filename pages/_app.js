@@ -1,7 +1,17 @@
 import '../style/style.css';
 import Head from 'next/head';
+import { auth } from '../firebase/config';
+import { useEffect, useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -12,7 +22,7 @@ function MyApp({ Component, pageProps }) {
           integrity='sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu'
           crossOrigin='anonymous'></link>
       </Head>
-      <Component {...pageProps} />
+      <Component {...pageProps} user={user} />
     </>
   );
 }

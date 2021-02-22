@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import LoginHomeScreen from '../components/LoginHomeScreen';
 
-export default function Home() {
-  return <LoginHomeScreen />;
+export default function Home({ user }) {
+  console.log(user);
+  return <LoginHomeScreen user={user} />;
 }
