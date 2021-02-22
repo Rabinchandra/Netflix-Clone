@@ -1014,39 +1014,19 @@ ul {
   margin: 1rem 0;
 }
 
-.planform .plan-options-container .plan-options:first-child {
-  user-select: none;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-}
-
-.planform .plan-options-container .plan-options:first-child div:not(:first-child).active {
-  position: relative;
-}
-
-.planform .plan-options-container .plan-options:first-child div:not(:first-child).active::after {
-  content: '';
-  position: absolute;
-  top: 15%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  width: 100%;
-  height: 100%;
-  background-color: #e50914;
-  z-index: -1;
-  transform: rotate(-50deg) scale(0.6);
+.planform .plan-options-container header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .planform .plan-options-container .plan-options {
   grid-gap: 3em;
+}
+
+.planform .plan-options-container .plan-options div {
+  min-width: 70px;
 }
 
 .planform .plan-options-container .plan-options div:not(:first-child) {
@@ -1073,6 +1053,35 @@ ul {
   grid-column: 10 / 12;
 }
 
+.planform .plan-options-container .plan-options:first-child {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+.planform .plan-options-container .plan-options:first-child div:not(:first-child).active {
+  position: relative;
+}
+
+.planform .plan-options-container .plan-options:first-child div:not(:first-child).active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: #e50914;
+  z-index: -1;
+  transform: rotate(-50deg);
+}
+
 .planform .plan-options-container .plan-options:not(:first-child) {
   padding: 1.4em 1em;
 }
@@ -1086,12 +1095,16 @@ ul {
   color: #e50914;
 }
 
+.planform .plan-options-container .plan-options .active {
+  color: #e50914;
+}
+
 .planform .plan-options-container .plan-options div:not(:first-child) {
   opacity: 0.5;
 }
 
 .planform .plan-options-container .plan-options i {
-  color: inherit;
+  color: inherit !important;
 }
 
 .planform .plan-options-container header div:not(:first-child) {
@@ -1099,6 +1112,14 @@ ul {
   color: #fff !important;
   padding: 3rem 0;
   font-weight: 500;
+}
+
+.planform .plan-options-container .small-screen-link {
+  display: none;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #333;
 }
 
 .planform small {
@@ -1126,6 +1147,56 @@ ul {
 .planform .continue-btn:hover {
   cursor: pointer;
   background-color: #f6121d;
+}
+
+@media screen and (max-width: 950px) {
+  .planform .plan-options-container header div {
+    padding: 2.1rem 0 !important;
+  }
+  .planform .plan-options-container .plan-options {
+    grid-gap: 1rem;
+  }
+  .planform .plan-options-container .plan-options:first-child div:not(:first-child).active::after {
+    top: 55%;
+    left: 30%;
+    width: 45%;
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .plan-options-container {
+    padding: 0 1rem;
+  }
+  .plan-options-container .plan-options {
+    padding: 0;
+  }
+  .plan-options-container .plan-options div:first-child {
+    display: none;
+  }
+  .plan-options-container .plan-options div {
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0;
+  }
+  .plan-options-container .plan-options:not(:first-child) {
+    padding: 1rem 0 !important;
+  }
+  .plan-options-container .plan-options div:nth-child(2) {
+    grid-column: 1 / 4 !important;
+  }
+  .plan-options-container .plan-options div:nth-child(3) {
+    grid-column: 4 / 7 !important;
+  }
+  .plan-options-container .plan-options div:nth-child(4) {
+    grid-column: 7 / 10 !important;
+  }
+  .plan-options-container .plan-options div:nth-child(5) {
+    grid-column: 10 / 13 !important;
+  }
+  .plan-options-container .small-screen-link {
+    display: block !important;
+  }
 }
 
 * {

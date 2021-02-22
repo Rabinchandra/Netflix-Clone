@@ -6,17 +6,24 @@ function planform() {
   const planOptionsContainer = useRef(null);
 
   const clickHandler = (e) => {
-    const classes = e.target.classList;
-    // Get all the elements with plan-option class
+    const classes = Array.from(e.target.classList);
+    // Get all the elements with 'plan-option' class
     const planOptionArray = Array.from(
       planOptionsContainer.current.querySelectorAll('.plan-option')
     );
+    const planTypes = ['mobile', 'basic', 'standard', 'premium'];
+    // get the classes of the element being clicked and check if it contains
+    // of the one plan types as class. if yes, then push it to foundClass
+    const foundClass = classes.filter((c) =>
+      planTypes.includes(c.toLowerCase()) ? true : false
+    )[0];
 
-    if (classes.contains('plan-option')) {
+    if (foundClass) {
       planOptionArray.forEach((option) => option.classList.remove('active'));
-      // Get all the elements which will have active class
+
+      // Get all the elements with class of the value that foundClass holds
       const elementsToBeActive = Array.from(
-        document.querySelectorAll(`.plan-option.${classes[1]}`)
+        document.querySelectorAll(`.plan-option.${foundClass}`)
       );
 
       elementsToBeActive.forEach((el) => el.classList.add('active'));
@@ -47,6 +54,8 @@ function planform() {
             <div className='plan-option premium'>Premium</div>
           </header>
 
+          <section className='small-screen-link'>Monthly Price</section>
+
           <section className='plan-options grid-12'>
             <div>Monthly Price</div>
             <div className='plan-option mobile'>₹ 199</div>
@@ -54,6 +63,8 @@ function planform() {
             <div className='plan-option standard'>₹ 649</div>
             <div className='plan-option premium'>₹ 799</div>
           </section>
+
+          <section className='small-screen-link'>Video Quality</section>
 
           <section className='plan-options grid-12'>
             <div>Video Quality</div>
@@ -63,6 +74,8 @@ function planform() {
             <div className='plan-option premium'>Best</div>
           </section>
 
+          <section className='small-screen-link'>Resolution</section>
+
           <section className='plan-options grid-12'>
             <div>Resolution</div>
             <div className='plan-option mobile'>480p</div>
@@ -71,59 +84,93 @@ function planform() {
             <div className='plan-option premium'>4K+HDR</div>
           </section>
 
+          <section className='small-screen-link'>
+            Watch on your TV and computer
+          </section>
+
           <section className='plan-options grid-12'>
             <div>Watch on your TV and computer</div>
             <div className='plan-option mobile'>
-              <i className='fas fa-times'></i>
+              <i className='fas fa-times mobile'></i>
             </div>
             <div className='plan-option basic'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check basic'></i>
             </div>
             <div className='plan-option standard'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check standard'></i>
             </div>
             <div className='plan-option premium'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check premium'></i>
             </div>
+          </section>
+
+          <section className='small-screen-link'>
+            Watch on your mobile phone and tablet
           </section>
 
           <section className='plan-options grid-12'>
             <div>Watch on your mobile phone and tablet</div>
+            <div className='plan-option mobile'>
+              <i className='fas fa-times mobile'></i>
+            </div>
+            <div className='plan-option basic'>
+              <i className='fas fa-check basic'></i>
+            </div>
+            <div className='plan-option standard'>
+              <i className='fas fa-check standard'></i>
+            </div>
+            <div className='plan-option premium'>
+              <i className='fas fa-check premium'></i>
+            </div>
+          </section>
+
+          <section className='small-screen-link'>
+            Screens you can watch on at the same time
+          </section>
+
+          <section className='plan-options grid-12'>
+            <div>Screens you can watch on at the same time</div>
             <div className='plan-option mobile'>1</div>
             <div className='plan-option standard'>1</div>
             <div className='plan-option basic'>2</div>
             <div className='plan-option premium'>4</div>
           </section>
 
+          <section className='small-screen-link'>
+            Unlimited movies and TV shows{' '}
+          </section>
+
           <section className='plan-options grid-12'>
             <div>Unlimited movies and TV Shows</div>
             <div className='plan-option mobile'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check mobile'></i>
             </div>
             <div className='plan-option basic'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check basic'></i>
             </div>
             <div className='plan-option standard'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check standard'></i>
             </div>
             <div className='plan-option premium'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check premium'></i>
             </div>
           </section>
+
+          <section className='small-screen-link'>Cancel anytime</section>
 
           <section className='plan-options grid-12'>
             <div>Cancel</div>
             <div className='plan-option mobile'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check mobile'></i>
             </div>
             <div className='plan-option basic'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check basic'></i>
             </div>
             <div className='plan-option standard'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check standard'></i>
             </div>
             <div className='plan-option premium'>
-              <i className='fas fa-check'></i>
+              <i className='fas fa-check premium'></i>
             </div>
           </section>
         </section>
