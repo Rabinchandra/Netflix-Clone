@@ -1,9 +1,11 @@
 import LightFooter from '../../components/LightFooter';
 import LightNavbar from '../../components/LightNavbar';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { db, database } from '../../firebase/config';
 
-function planform() {
+function planform({ user }) {
   const planOptionsContainer = useRef(null);
+  const [selectedPlan, setSelectedPlan] = useState('');
 
   const clickHandler = (e) => {
     const classes = Array.from(e.target.classList);
@@ -27,6 +29,39 @@ function planform() {
       );
 
       elementsToBeActive.forEach((el) => el.classList.add('active'));
+      setSelectedPlan(foundClass);
+    }
+  };
+
+  const addPlanToDb = async () => {
+    if (user && selectedPlan) {
+      const found = await db
+        .collection('plans')
+        .where('id', '==', user.uid)
+        .get();
+
+      if (found.docs.length == 0) {
+        // Add new plan for the current user
+        db.collection('plans').add({
+          id: user.uid,
+          plan: selectedPlan,
+        });
+
+        console.log('Plan added...');
+      } else {
+        // Update current plan
+        db.collection('plans')
+          .get()
+          .then((snap) => {
+            const found = snap.docs.find((doc) => doc.data().id == user.uid);
+
+            db.collection('plans').doc(found.id).update({
+              plan: selectedPlan,
+            });
+          });
+
+        console.log('Plan updated...');
+      }
     }
   };
 
@@ -128,7 +163,7 @@ function planform() {
             Screens you can watch on at the same time
           </section>
 
-          <section className='plan-op tions grid-12'>
+          <section className='plan-options grid-12'>
             <div>Screens you can watch on at the same time</div>
             <div className='plan-option mobile'>1</div>
             <div className='plan-option standard'>1</div>
@@ -182,7 +217,14 @@ function planform() {
           <a href='https://help.netflix.com/legal/termsofuse'>Terms of Use</a>{' '}
           for more details.
         </small>
-        <button className='btn btn-red continue-btn'>Continue</button>
+
+        {selectedPlan ? (
+          <button className='btn btn-red continue-btn' onClick={addPlanToDb}>
+            Continue
+          </button>
+        ) : (
+          ''
+        )}
       </div>
       <LightFooter />
     </>

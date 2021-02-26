@@ -5,9 +5,11 @@ import { useRouter } from 'next/router';
 
 function Navbar({ user }) {
   const router = useRouter();
+
   const signOutHandler = () => {
     auth.signOut();
   };
+
   return (
     <nav className='navbar'>
       <div className='navbar__logo'>

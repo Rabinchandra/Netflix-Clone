@@ -9,6 +9,7 @@ function LightNavbar() {
     auth.signOut();
     router.push('/');
   };
+
   return (
     <nav className='light-navbar'>
       <Link href='/'>

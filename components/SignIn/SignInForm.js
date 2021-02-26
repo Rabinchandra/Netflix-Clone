@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { auth } from '../../firebase/config';
+import { useRouter } from 'next/router';
 
-function SignInForm() {
-  const [email, setEmail] = useState('');
+function SignInForm({ userEmail, setUserEmail }) {
+  const router = useRouter();
   const [password, setPassword] = useState('');
   const [isSigningUp, setIsSigningUp] = useState(false);
   const [isSigningIn, setIsSigningIn] = useState(false);
@@ -12,9 +13,10 @@ function SignInForm() {
     setIsSigningUp(true);
 
     auth
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(userEmail, password)
       .then(() => {
         setIsSigningUp(false);
+        router.push('/');
       })
       .catch((err) => {
         setIsSigningUp(false);
@@ -27,8 +29,11 @@ function SignInForm() {
     e.preventDefault();
     setIsSigningIn(true);
     auth
-      .signInWithEmailAndPassword(email, password)
-      .then(() => setIsSigningIn(false))
+      .signInWithEmailAndPassword(userEmail, password)
+      .then(() => {
+        setIsSigningIn(false);
+        router.push('/');
+      })
       .catch((err) => {
         setIsSigningIn(false);
         setError(err.message);
@@ -44,7 +49,8 @@ function SignInForm() {
         placeholder='Email or phone number'
         id='emailOrPhone'
         spellCheck='false'
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e) => setUserEmail(e.target.value)}
+        value={userEmail}
         autoComplete='off'
       />
       <input

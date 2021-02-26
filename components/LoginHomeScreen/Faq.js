@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import GetStartedInput from './GetStartedInput';
 
-function Faq() {
+function Faq({ user, setUserEmail }) {
   const collapseWrapper = useRef(null);
 
   const collapseHandler = (n) => {
@@ -116,7 +116,7 @@ function Faq() {
           </section>
         </div>
       </section>
-      <GetStartedInput />
+      <GetStartedInput user={user} setUserEmail={setUserEmail} />
     </div>
   );
 }

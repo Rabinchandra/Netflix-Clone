@@ -4,13 +4,13 @@ import StoryCards from './LoginHomeScreen/StoryCards';
 import Faq from './LoginHomeScreen/Faq';
 import DarkFooter from './DarkFooter';
 
-function LoginHomeScreen({ user }) {
+function LoginHomeScreen({ user, hasPlan, setUserEmail }) {
   return (
     <div className='loginHomeScreen'>
       <Navbar user={user} />
-      <Showcase />
+      <Showcase user={user} setUserEmail={setUserEmail} />
       <StoryCards />
-      <Faq />
+      <Faq user={user} setUserEmail={setUserEmail} />
       <DarkFooter />
     </div>
   );
