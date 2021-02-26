@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { auth } from '../firebase/config';
 import { useRouter } from 'next/router';
 
-function LightNavbar() {
+function LightNavbar({ user }) {
   const router = useRouter();
   const signOutHandler = () => {
     auth.signOut();
@@ -15,7 +15,11 @@ function LightNavbar() {
       <Link href='/'>
         <img src='/icons/netflix.png' alt='' />
       </Link>
-      <a onClick={signOutHandler}>Sign out</a>
+      {user ? (
+        <a onClick={signOutHandler}>Sign out</a>
+      ) : (
+        <a onClick={() => router.push('/signin')}>Sign in</a>
+      )}
     </nav>
   );
 }

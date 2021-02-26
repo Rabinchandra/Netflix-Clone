@@ -4,21 +4,19 @@ import Link from 'next/link';
 function GetStartedInput({ user, setUserEmail, userEmail }) {
   return (
     <div className='get-started-input'>
-      <div className='input-container'>
-        {user ? (
-          <Link href='/signup'>
-            <a
-              className='btn btn-red'
-              style={{ transform: 'scale(1.3)', minWidth: '150px' }}>
-              Finish Sign Up <i className='fas fa-chevron-right'></i>
-            </a>
-          </Link>
-        ) : (
-          <>
-            <h5>
-              Ready to watch? Enter your email to create or restart your
-              membership.
-            </h5>
+      {user ? (
+        <Link href='/signup'>
+          <a className='btn btn-red finish-sign-up'>
+            Finish Sign Up <i className='fas fa-chevron-right'></i>
+          </a>
+        </Link>
+      ) : (
+        <>
+          <h5>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h5>
+          <div className='input-container'>
             <input
               type='text'
               placeholder='Email address'
@@ -30,9 +28,9 @@ function GetStartedInput({ user, setUserEmail, userEmail }) {
                 Get Started <i className='fas fa-chevron-right'></i>
               </a>
             </Link>
-          </>
-        )}
-      </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

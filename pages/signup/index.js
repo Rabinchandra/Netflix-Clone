@@ -3,10 +3,10 @@ import LightNavbar from '../../components/LightNavbar';
 import Link from 'next/link';
 import LightFooter from '../../components/LightFooter';
 
-function SignUp() {
+function SignUp({ user }) {
   return (
     <div className='signup'>
-      <LightNavbar />
+      <LightNavbar user={user} />
       <section className='signup__see-plan-container'>
         <i className='far fa-check-circle'></i>
         <small>

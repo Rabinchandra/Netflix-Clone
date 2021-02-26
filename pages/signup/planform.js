@@ -1,11 +1,13 @@
 import LightFooter from '../../components/LightFooter';
 import LightNavbar from '../../components/LightNavbar';
 import { useRef, useState } from 'react';
-import { db, database } from '../../firebase/config';
+import { db } from '../../firebase/config';
+import { useRouter } from 'next/router';
 
 function planform({ user }) {
   const planOptionsContainer = useRef(null);
   const [selectedPlan, setSelectedPlan] = useState('');
+  const router = useRouter();
 
   const clickHandler = (e) => {
     const classes = Array.from(e.target.classList);
@@ -48,6 +50,8 @@ function planform({ user }) {
         });
 
         console.log('Plan added...');
+
+        router.push('/');
       } else {
         // Update current plan
         db.collection('plans')
@@ -61,13 +65,18 @@ function planform({ user }) {
           });
 
         console.log('Plan updated...');
+
+        router.push('/');
       }
+    } else if (!user) {
+      // user is not logged in
+      router.push('/signin');
     }
   };
 
   return (
     <>
-      <LightNavbar />
+      <LightNavbar user={user} />
       <div className='planform'>
         <header>
           <small>
@@ -166,8 +175,8 @@ function planform({ user }) {
           <section className='plan-options grid-12'>
             <div>Screens you can watch on at the same time</div>
             <div className='plan-option mobile'>1</div>
-            <div className='plan-option standard'>1</div>
-            <div className='plan-option basic'>2</div>
+            <div className='plan-option basic'>1</div>
+            <div className='plan-option standard'>2</div>
             <div className='plan-option premium'>4</div>
           </section>
 
