@@ -10,7 +10,7 @@ function SignUp({ user }) {
       <section className='signup__see-plan-container'>
         <i className='far fa-check-circle'></i>
         <small>
-          STEP <strong>1</strong> OF <strong>3</strong>
+          STEP <strong>1</strong> OF <strong>2</strong>
         </small>
         <header>Choose your plan.</header>
         <ul>

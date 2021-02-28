@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import { db } from '../../firebase/config';
 import { useRouter } from 'next/router';
 
-function planform({ user }) {
+function Planform({ user, setHasPlan }) {
   const planOptionsContainer = useRef(null);
   const [selectedPlan, setSelectedPlan] = useState('');
   const router = useRouter();
@@ -46,10 +46,13 @@ function planform({ user }) {
         // Add new plan for the current user
         db.collection('plans').add({
           id: user.uid,
+          email: user.email,
           plan: selectedPlan,
         });
 
         console.log('Plan added...');
+
+        setHasPlan(true);
 
         router.push('/');
       } else {
@@ -80,7 +83,7 @@ function planform({ user }) {
       <div className='planform'>
         <header>
           <small>
-            STEP <strong>1</strong> OF <strong>3</strong>
+            STEP <strong>2</strong> OF <strong>2</strong>
           </small>
           <h4>Choose the plan that's right for you</h4>
           <p>Downgrade or upgrade at any time.</p>
@@ -240,4 +243,4 @@ function planform({ user }) {
   );
 }
 
-export default planform;
+export default Planform;

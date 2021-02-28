@@ -5,6 +5,19 @@
     margin-bottom: 20px;
   }
 
+  .finish-sign-up {
+    display: block;
+    font-size: 2em;
+    padding: 1.3rem 1.2rem;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 0.8em auto;
+
+    &:hover {
+      background-color: lighten($primary-red, 10%);
+    }
+  }
+
   .input-container {
     display: inline-flex;
     width: 100%;
@@ -67,6 +80,12 @@
 
     .input-container {
       max-width: 90% !important;
+    }
+
+    .finish-sign-up {
+      font-size: 1.3em;
+      padding: 0.7em 1em;
+      width: 210px;
     }
   }
 }

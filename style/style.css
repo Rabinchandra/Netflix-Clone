@@ -437,6 +437,19 @@ ul {
   margin-bottom: 20px;
 }
 
+.get-started-input .finish-sign-up {
+  display: block;
+  font-size: 2em;
+  padding: 1.3rem 1.2rem;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 0.8em auto;
+}
+
+.get-started-input .finish-sign-up:hover {
+  background-color: #f72a35;
+}
+
 .get-started-input .input-container {
   display: inline-flex;
   width: 100%;
@@ -492,6 +505,11 @@ ul {
   }
   .get-started-input .input-container {
     max-width: 90% !important;
+  }
+  .get-started-input .finish-sign-up {
+    font-size: 1.3em;
+    padding: 0.7em 1em;
+    width: 210px;
   }
 }
 
@@ -997,6 +1015,7 @@ ul {
   max-width: 1024px;
   margin: 1rem auto;
   margin-bottom: 10em;
+  padding: 0 0.5em;
 }
 
 .planform header {
@@ -1197,6 +1216,51 @@ ul {
   .plan-options-container .small-screen-link {
     display: block !important;
   }
+}
+
+.homescreen .navbar img {
+  width: 150px;
+}
+
+.homescreen__showcase {
+  height: 500px;
+  background-size: cover !important;
+  color: #fff;
+  padding: 3em;
+  align-items: center;
+}
+
+.homescreen__showcase .details {
+  grid-column: 1 / span 4;
+}
+
+.homescreen__showcase .details h1 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.homescreen__showcase .details p {
+  font-size: 1.4rem;
+}
+
+.homescreen__showcase .details .btn {
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+}
+
+.homescreen__showcase .details .btn i {
+  margin-right: 5px;
+}
+
+.homescreen__showcase .details .btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.homescreen__showcase .details .btn:first-child {
+  margin-right: 14px;
 }
 
 * {

@@ -27,6 +27,10 @@
 @import './signup/signup';
 @import './signup/planform';
 
+// Homescreen
+@import './Homescreen/navbar';
+@import './Homescreen/showcase';
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;

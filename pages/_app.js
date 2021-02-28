@@ -20,6 +20,8 @@ function MyApp({ Component, pageProps }) {
             const found = snap.docs.find((doc) => doc.data().id === user.uid);
             found ? setHasPlan(true) : setHasPlan(false);
           });
+      } else {
+        setHasPlan(false);
       }
     });
   }, []);
@@ -38,6 +40,7 @@ function MyApp({ Component, pageProps }) {
         {...pageProps}
         user={user}
         hasPlan={hasPlan}
+        setHasPlan={setHasPlan}
         userEmail={userEmail}
         setUserEmail={setUserEmail}
       />

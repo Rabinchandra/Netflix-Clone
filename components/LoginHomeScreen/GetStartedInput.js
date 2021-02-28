@@ -1,4 +1,3 @@
-import { LinearScale } from '@material-ui/icons';
 import Link from 'next/link';
 
 function GetStartedInput({ user, setUserEmail, userEmail }) {
