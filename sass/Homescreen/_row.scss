@@ -1,0 +1,60 @@
+.row {
+  //   border: 1px solid green;
+  // background-color: $primary-dark;
+  overflow: hidden;
+  padding-bottom: 2em;
+
+  header {
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    padding: 0 1em;
+  }
+
+  &__posters {
+    display: flex;
+    overflow-x: scroll;
+    z-index: 200;
+    padding: 1em;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    img {
+      max-height: 230px;
+      transition: transform 0.15s;
+      cursor: pointer;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .video {
+    width: 80%;
+    height: 400px;
+    max-width: 700px;
+    min-width: 400px;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  .row {
+    header {
+      font-size: 1.2em;
+    }
+    &__posters {
+      img {
+        max-height: 180px;
+      }
+    }
+  }
+}

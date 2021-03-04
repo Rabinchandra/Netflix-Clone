@@ -1,5 +1,16 @@
 .homescreen .navbar {
+  z-index: 2;
   img {
     width: 150px;
+  }
+}
+
+@media screen and (max-width: $small-screen) {
+  .homescreen {
+    .navbar {
+      img {
+        width: 100px;
+      }
+    }
   }
 }

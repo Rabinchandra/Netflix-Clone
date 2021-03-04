@@ -2,11 +2,12 @@
   //   border: 1px solid green;
   height: 500px;
   background-size: cover !important;
-  //   background-position: center center;
+  // background-position: center center;
 
   color: #fff;
   padding: 3em;
   align-items: center;
+  position: relative;
 
   .details {
     grid-column: 1 / span 4;
@@ -25,7 +26,6 @@
       padding: 1rem 1.5rem;
       background-color: rgba(0, 0, 0, 0.4);
       color: #fff;
-      cursor: pointer;
 
       i {
         margin-right: 5px;
@@ -38,6 +38,60 @@
 
     .btn:first-child {
       margin-right: 14px;
+    }
+  }
+
+  .darkline {
+    // border: 1px solid green;
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0));
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  .homescreen__showcase {
+    .details {
+      grid-column: 1 / span 6;
+      h1 {
+        font-size: 2.4em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .homescreen__showcase {
+    padding: 1.4em;
+
+    .details {
+      p {
+        font-size: 1.2em;
+        font-weight: 300;
+      }
+
+      .btn {
+        font-size: 1em;
+        padding: 12px 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen) {
+  .homescreen__showcase {
+    .details {
+      grid-column: 1 / span 9;
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
     }
   }
 }
