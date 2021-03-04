@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
           href='https://use.fontawesome.com/releases/v5.15.2/css/all.css'
           integrity='sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu'
           crossOrigin='anonymous'></link>
+        <link rel="icon" href="/icons/logo.png" size="16x10"/>
       </Head>
       <Component
         {...pageProps}
