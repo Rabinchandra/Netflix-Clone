@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import Showcase from './LoginHomeScreen/showcase';
+import Showcase from './LoginHomeScreen/Showcase';
 import StoryCards from './LoginHomeScreen/StoryCards';
 import Faq from './LoginHomeScreen/Faq';
 import DarkFooter from './DarkFooter';
